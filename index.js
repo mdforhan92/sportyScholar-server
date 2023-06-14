@@ -343,6 +343,7 @@ async function run() {
             const instructors = await userCollection.aggregate(pipeline).toArray();
             res.send(instructors);
         });
+        
 
         //! create payment intent
         app.post('/create-payment-intent',verifyJWT, async (req, res) => {
